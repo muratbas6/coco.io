@@ -1,1 +1,2 @@
-#most popular coin prices in single click!
+# coco.io
+popular cryptocoin prices in one click!
