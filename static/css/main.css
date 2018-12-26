@@ -1,0 +1,25 @@
+body{
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: teal;
+}
+
+.coin_info{
+  margin: 5px;
+  display: inline-block;
+  border: 2px solid black;
+}
+
+.coin_header{
+  color: yellowgreen;
+}
+
+.coin_price{
+  color: yellowgreen;
+}
+
+
+.main{
+  color:yellowgreen;
+  font-size: 60px;
+}
