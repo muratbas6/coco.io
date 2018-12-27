@@ -6,12 +6,15 @@ body{
 }
 
 .coin_info{
-  margin: 5px;
   display: inline-block;
+  padding: 0px;
   border: 2px solid black;
   border-bottom: 5px solid black;
   border-right: 5px solid black;
-  width: 300px;
+  width: 40%;
+  margin: 5px;
+  padding: 10px;
+
 }
 
 .coin_header{
@@ -26,4 +29,11 @@ body{
 .main{
   color:yellowgreen;
   font-size: 60px;
+  display: inline-block;
 }
+
+
+.message{
+  display: inline;
+}
+
