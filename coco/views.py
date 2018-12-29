@@ -14,12 +14,14 @@ def HomePage(request):
   response = urllib.request.urlopen(req)
   data = response.read().decode("utf-8") 
   coins =[]
-  prices = []
+
   obj = json.loads(data, cls=json.JSONDecoder)
   ke = obj.keys()
   for key in ke:
-      coins.append(str(obj[key]["symbol"]))
-      prices.append(str(obj[key]["price"]))
+      coins.append(obj[key])
+     
 
-  data = dict(zip(coins,prices))
-  return render(request,"home.html",{"data":data})
+    
+  print(coins)  
+
+  return render(request,"home.html",{"coins":coins})
