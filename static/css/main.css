@@ -1,7 +1,7 @@
 body{
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
-  background-color: teal;
+  background-color: white;
   margin: 0px;  
 }
 
@@ -14,6 +14,7 @@ body{
   width: 40%;
   margin: 5px;
   padding: 10px;
+  background-color: teal
 
 }
 
