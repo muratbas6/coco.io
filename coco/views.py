@@ -11,19 +11,21 @@ hdr = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML,
 
 
 def HomePage(request):
-  coins = []
-  req=urllib.request.Request("https://chasing-coins.com/api/v1/ top-coins/20",None,hdr)
-  try:
-      response = urllib.request.urlopen(req)    
-  except urllib.error.HTTPError as e:
-      print(e)
-      return render(request,"home.html",{"error":e})
-  
-  data = response.read().decode("utf-8") 
-  obj = json.loads(data, cls=json.JSONDecoder)
-  ke = obj.keys()
-  for key in ke:
-      coins.append(obj[key])
-     
+    coins = []
+    req = urllib.request.Request(
+        "https://chasing-coins.com/api/v1/top-coins/20", None, hdr)
 
-  return render(request,"home.html",{"coins":coins})
+    try:
+        response = urllib.request.urlopen(req)
+    except urllib.error.HTTPError as e:
+        return render(request, "home.html", {"error": e})
+    else:
+        pass
+
+    data = response.read().decode("utf-8")
+    obj = json.loads(data, cls=json.JSONDecoder)
+    ke = obj.keys()
+    for key in ke:
+        coins.append(obj[key])
+
+    return render(request, "home.html", {"coins": coins})
