@@ -7,14 +7,13 @@ body{
 
 .coin_info{
   display: inline-block;
-
   border: 2px solid black;
   border-bottom: 5px solid black;
   border-right: 5px solid black;
   width: 400px;
   margin: 5px;
   padding: 20px;
-  background-color: teal
+  background-color: #008080
 }
 
 @media only screen and (max-width: 479px){
