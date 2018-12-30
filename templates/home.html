@@ -13,7 +13,12 @@
 
 <body>
  <div class="navbar">
-  <h1 class="main">coco.io</h1>
+  {% if error %}
+    <h1 class="main">{{error}}</h1>
+  {% else %}
+    <h1 class="main">coco.io</h1>
+  {% endif %}
+  
    <a href="https://github.com/muratbas6" target="_blank">github.com/muratbas6</a>
  </div> 
     {% for coins in coins %}  
@@ -25,6 +30,8 @@
         {% else %}
            <h2 class="coin_change_positive"> {{coins.change.day}}% </h2>
         {% endif %}
+
+       
       </div>
     {% endfor %}
     
